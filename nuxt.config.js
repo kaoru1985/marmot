@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-vuex-counter',
+    title: 'モルモット実験場',
     htmlAttrs: {
       lang: 'en'
     },
