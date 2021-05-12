@@ -6,6 +6,5 @@
     <button v-on:click="$store.commit('hoge/resetCount')">reset</button>
     <br>
     お値段: {{ $store.state.hoge.price }} 円
-    <hr>
   </section>
 </template>

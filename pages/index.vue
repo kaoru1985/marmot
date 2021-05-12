@@ -9,3 +9,8 @@
 <script>
 export default {}
 </script>
+<style>
+  .container {
+    text-align: center;
+  }
+</style>

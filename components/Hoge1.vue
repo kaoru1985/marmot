@@ -6,6 +6,17 @@
     <button v-on:click="$store.commit('hoge/resetCount')">reset</button>
     <br>
     お値段: {{ $store.state.hoge.price }} 円
-    <hr>
   </section>
 </template>
+
+<style module>
+section {
+  width: 50%;
+  margin: 15px auto;
+  padding: 20px;
+  border: solid 2px #3b8070;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+}
+
+</style>
