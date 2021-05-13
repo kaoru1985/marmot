@@ -1,13 +1,37 @@
 <template>
   <div class="container">
-    <Hoge1 />
-    <Hoge2 />
-    <Hoge3 />
+    <div v-for="product in products">
+      <Hoge1 :name="product.name" :price="product.price" :detail="product.detail" />
+    </div>
+    <p v-if="$store.state.hoge.number === 0"><strong>カートに何も入っていません</strong></p>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+    data() {
+        return {
+            products:[
+                {
+                    name: 'くつした',
+                    price: 100,
+                    detail: 'かわいいです'
+                  
+                },
+                {
+                    name: 'Tシャツ',
+                    price: 500,
+                    detail: 'かっこいいです'
+                },
+                {
+                    name: 'スカート',
+                    price: 900,
+                    detail: 'ひらひらです'
+                }
+            ]
+        }
+    }
+}
 </script>
 <style>
   .container {

@@ -4,22 +4,12 @@ export const state = () => ({
 });
 
 export const mutations = {
-  plusCount1: function (state) {
+  plusCount: function (state,amount) {
     state.number ++;
-    state.price += 100
+    state.price += amount
   },
-  plusCount2: function (state) {
-    state.number ++;
-    state.price += 300
-  },
-  plusCount3: function (state) {
-    state.number ++;
-    state.price += 500
-  },
-
   resetCount: function (state) {
     state.number = 0;
     state.price = 0
   }
 }
-
