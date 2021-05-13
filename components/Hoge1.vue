@@ -38,7 +38,8 @@
 
 <style>
 section {
-  width: 50%;
+  width: 80%;
+  max-width: 800px;
   margin: 15px auto;
   padding: 20px;
   border: solid 2px #3b8070;
