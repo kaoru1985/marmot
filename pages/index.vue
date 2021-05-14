@@ -25,7 +25,7 @@ export default {
                 },
                 {
                     name: 'スカート',
-                    price: 900,
+                    price: 1200,
                     detail: 'ひらひらです'
                 }
             ]
