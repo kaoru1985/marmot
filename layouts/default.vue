@@ -7,6 +7,8 @@
 <style>
 html {
   font-family:
+    '游ゴシック体',
+    YuGothic,
     'Source Sans Pro',
     -apple-system,
     BlinkMacSystemFont,
@@ -15,7 +17,7 @@ html {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -31,13 +33,51 @@ html {
   margin: 0;
 }
 
+body {
+  color: #444;
+  background-color: #F5F3EE;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.header-wrap {
+  width: 100%;
+  height: 50px;
+  padding-top: 13px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.header-content {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.toggle-wrap {
+  margin: 12px auto;
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;
   border: 1px solid #3b8070;
   color: #3b8070;
+  background-color: #fff;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 6px 10px;
 }
 
 .button--green:hover {
@@ -51,7 +91,7 @@ html {
   border: 1px solid #35495e;
   color: #35495e;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 6px 10px;
   margin-left: 15px;
 }
 

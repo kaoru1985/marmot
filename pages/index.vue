@@ -1,9 +1,15 @@
 <template>
   <div class="container">
-    <div v-for="product in products">
-      <Hoge1 :name="product.name" :price="product.price" :detail="product.detail" />
+    <div class="header-wrap">
+      <div class="header-content">maison marmot</div>
     </div>
-    <p v-if="$store.state.hoge.number === 0"><strong>カートに何も入っていません</strong></p>
+    <div v-for="product in products" class="component-wrap">
+      <Hoge1 :name="product.name" :price="product.price" :detail="product.detail" :material="product.material" />
+    </div>
+    <p class="total">
+      <span v-if="$store.state.hoge.number === 0">カートに何も入っていません</span>
+      <span v-else>合計金額: {{ $store.state.hoge.price }} 円</span>
+    </p>
   </div>
 </template>
 
@@ -14,19 +20,22 @@ export default {
             products:[
                 {
                     name: 'くつした',
-                    price: 100,
-                    detail: 'かわいいです'
+                    price: 290,
+                    material: '綿 100%',
+                    detail: '丈夫でかわいいです'
                   
                 },
                 {
                     name: 'Tシャツ',
-                    price: 500,
-                    detail: 'かっこいいです'
+                    price: 1490,
+                    material: '綿 90%、ポリエステル 10%',
+                    detail: 'いい感じにかっこいいです'
                 },
                 {
                     name: 'スカート',
-                    price: 1200,
-                    detail: 'ひらひらです'
+                    price: 1990,
+                    material: 'ポリエステル 50%、レーヨン 50%',
+                    detail: 'ひらひらですてきです'
                 }
             ]
         }
@@ -37,4 +46,14 @@ export default {
   .container {
     text-align: center;
   }
+
+  .container .component-wrap:last-of-type {
+    margin-bottom: 30px;
+  }
+  
+  .total {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
 </style>
