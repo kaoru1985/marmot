@@ -6,7 +6,7 @@ export const state = () => ({
 export const mutations = {
   plusCount: function (state,amount) {
     state.number ++;
-    state.price += amount
+    state.price += amount;
   },
   resetCount: function (state) {
     state.number = 0;

@@ -1,7 +1,7 @@
 <template>
   <section>
     <h1>{{ name }}</h1>
-    <h2>{{ price }}円(税込)</h2>
+    <h2>{{ price.toLocaleString() }}円(税込)</h2>
     <div class="toggle-wrap">
       <button @click="toggleDetail()" class="detail-button">
         商品詳細を<span v-if="displayDetail">隠す</span><span v-else>表示</span>
@@ -42,7 +42,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   section {
     width: 90%;
     max-width: 800px;

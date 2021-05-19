@@ -1,14 +1,13 @@
 <template>
   <div class="container">
-    <div class="header-wrap">
-      <div class="header-content">maison marmot</div>
-    </div>
+    <Header />
     <div v-for="product in products" class="component-wrap">
       <Hoge1 :name="product.name" :price="product.price" :detail="product.detail" :material="product.material" />
     </div>
     <p class="total">
       <span v-if="$store.state.hoge.number === 0">カートに何も入っていません</span>
-      <span v-else>合計金額: {{ $store.state.hoge.price }} 円</span>
+      <span v-else>合計金額：{{ $store.state.hoge.price.toLocaleString() }} 円(税込)<br>
+      <NuxtLink to='/confirm' class="button--green">注文内容を確認する</NuxtLink></span>
     </p>
   </div>
 </template>
