@@ -2,7 +2,7 @@
   <div class="container">
     <Header />
     <div v-for="product in products" class="component-wrap">
-      <Hoge1 :name="product.name" :price="product.price" :detail="product.detail" :material="product.material" />
+      <Hoge1 :name="product.name" :price="product.price" :detail="product.description" :material="product.material" />
     </div>
     <p class="total">
       <span v-if="$store.state.hoge.number === 0">カートに何も入っていません</span>
@@ -13,32 +13,45 @@
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            products:[
-                {
-                    name: 'くつした',
-                    price: 290,
-                    material: '綿 100%',
-                    detail: '丈夫でかわいいです'
-                  
-                },
-                {
-                    name: 'Tシャツ',
-                    price: 1490,
-                    material: '綿 90%、ポリエステル 10%',
-                    detail: 'いい感じにかっこいいです'
-                },
-                {
-                    name: 'スカート',
-                    price: 1990,
-                    material: 'ポリエステル 50%、レーヨン 50%',
-                    detail: 'ひらひらですてきです'
-                }
-            ]
-        }
-    }
+    const axios = require('axios')
+    let url = 'https://script.google.com/macros/s/AKfycbzCenlXXVFhOGa0r8ly1tsjHr-Dv0qrcigGwJWE_kjGhRAimeqvLBQZMgBAjrIgRwwc1w/exec'
+
+    export default {
+        asyncData({params}) {
+            return axios.get(url)
+                .then((res) => {
+                    console.log(res.data[0]);
+                    return {
+                        products: res.data
+                    }
+                })
+        },
+        
+    // data() {
+    //     return {
+    //         products:[
+    //             {
+    //                 name: 'くつした',
+    //                 price: 290,
+    //                 material: '綿 100%',
+    //                 detail: '丈夫でかわいいです'
+    //
+    //             },
+    //             {
+    //                 name: 'Tシャツ',
+    //                 price: 1490,
+    //                 material: '綿 90%、ポリエステル 10%',
+    //                 detail: 'いい感じにかっこいいです'
+    //             },
+    //             {
+    //                 name: 'スカート',
+    //                 price: 1990,
+    //                 material: 'ポリエステル 50%、レーヨン 50%',
+    //                 detail: 'ひらひらですてきです'
+    //             }
+    //         ]
+    //     }
+    // }
 }
 </script>
 <style>

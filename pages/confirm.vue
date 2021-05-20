@@ -8,7 +8,7 @@
       </p>
     </div>
     <p class="total">
-      合計金額：ほげほげ 円(税込)
+      合計金額：{{ total.toLocaleString() }} 円(税込)
     </p>
   </div>
 </template>
@@ -32,7 +32,9 @@
                         itemNumber: 1,
                         price: 1990,
                     }
-                ]
+                ],
+                
+                total: 5840
             }
         }
     }
