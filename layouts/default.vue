@@ -53,7 +53,7 @@ ul li {
 .header-wrap {
   width: 100%;
   height: 50px;
-  padding-top: 13px;
+  padding-top: 6px;
   text-align: left;
   font-size: 16px;
   font-weight: bold;
