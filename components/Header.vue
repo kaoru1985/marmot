@@ -1,8 +1,8 @@
 <template>
   <div class="header-wrap">
     <div class="header-content">
-      <span>maison marmot　</span>
-      <NuxtLink to='/article-list' class="button--green">news</NuxtLink>
+      <NuxtLink to='/' class="header-title">maison marmot</NuxtLink>
+      <NuxtLink to='/posts' class="button--green">news</NuxtLink>
     </div>
   </div>
 </template>
@@ -10,3 +10,12 @@
   export default {
   }
 </script>
+<style>
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-title {
+    line-height: 40px;
+  }
+</style>

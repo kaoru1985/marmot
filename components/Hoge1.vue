@@ -43,17 +43,6 @@
 </script>
 
 <style scoped>
-  section {
-    width: 90%;
-    max-width: 800px;
-    margin: 15px auto;
-    padding: 20px;
-    background-color: #FFF;
-    border: solid 1px #F1F1F1;
-    border-radius: 5px;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
-  }
-  
   .detail-button {
     color: #3b8070;
     background-color: #fff;

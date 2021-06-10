@@ -38,6 +38,11 @@ body {
   background-color: #F5F3EE;
 }
 
+a {
+  color: initial;
+  text-decoration: none;
+}
+
 h2 {
   font-size: 1.2rem;
 }
@@ -50,14 +55,30 @@ ul li {
   list-style: none;
 }
 
+input, textarea {
+  width: 100%;
+}
+
+section {
+  width: 90%;
+  max-width: 800px;
+  margin: 15px auto;
+  padding: 20px;
+  background-color: #FFF;
+  border: solid 1px #F1F1F1;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+}
+
 .header-wrap {
   width: 100%;
   height: 50px;
-  padding-top: 6px;
+  padding-top: 5px;
   text-align: left;
   font-size: 16px;
   font-weight: bold;
   background-color: #fff;
+  margin-bottom: 20px;
 }
 
 .header-content {
@@ -70,8 +91,32 @@ ul li {
   margin: 12px auto;
 }
 
+.post-wrapper {
+  margin-bottom: 10px;
+}
+
+.post-wrapper h2 {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.link-wrapper {
+  text-align: right;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #3b8070;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+}
+
 .button--green {
-  display: inline-block;
+  display: inline-flex;
   border-radius: 4px;
   border: 1px solid #3b8070;
   color: #3b8070;
