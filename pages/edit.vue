@@ -38,13 +38,19 @@
       }
     },
     methods: {
-      formSubmit () {
+      async formSubmit () {
         axios.post(url,this.posts)
                 .then((res) => {
                   console.log(res);
                   this.result = '成功しました'
-                }
-                )
+                })
+
+        // 上記と同じ処理
+        // const res = await axios.post(url, this.posts)
+        // console.log(res);
+        // this.result = '成功しました'
+
+
       }
     }
   }
