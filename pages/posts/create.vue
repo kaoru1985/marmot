@@ -23,16 +23,14 @@
 </template>
 <script>
   const axios = require('axios')
-  let url = 'https://jsonplaceholder.typicode.com/posts/1'
+  let url = 'https://jsonplaceholder.typicode.com/posts/'
   
   export default {
-    // 多分使わなくなるページ
     data() {
       return {
         result: '',
         posts:
           {
-            id: null,
             title: '',
             body: '',
           }
@@ -40,12 +38,11 @@
     },
     methods: {
       async formSubmit () {
-
-        axios.put(url,this.posts)
+        axios.post(url,this.posts)
                 .then((res) => {
                   console.log(res);
                   this.result = '成功しました'
-                  this.posts.id = res.data.id
+                  // ここでリダイレクト
                 })
 
         // 上記と同じ処理
@@ -57,18 +54,5 @@
       }
     }
   }
-  
-  // fetch('https://jsonplaceholder.typicode.com/posts', {
-  //   method: 'POST',
-  //   body: JSON.stringify({
-  //     title: 'foo',
-  //     body: 'bar',
-  //     userId: 1,
-  //   }),
-  //   headers: {
-  //     'Content-type': 'application/json; charset=UTF-8',
-  //   },
-  // })
-  //         .then((response) => response.json())
-  //         .then((json) => console.log(json));
+
 </script>
