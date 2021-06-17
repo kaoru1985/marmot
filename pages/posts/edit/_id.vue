@@ -24,19 +24,18 @@
 </template>
 <script>
     const axios = require('axios')
-    let url = 'https://jsonplaceholder.typicode.com/posts/1'
+    let url = 'https://jsonplaceholder.typicode.com/posts'
 
     export default {
-        data() {
-            return {
-                result: '',
-                posts:
-                    {
-                        title: '',
-                        body: '',
-                        id: '',
+        asyncData ({params}) {
+            return axios.get(url + '/' + params.id)
+                .then((res) => {
+                    console.log(res.data.title);
+                    return {
+                        title: res.data.title,
+                        body: res.data.body,
                     }
-            }
+                })
         },
         methods: {
             async formSubmit () {
