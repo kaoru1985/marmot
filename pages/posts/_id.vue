@@ -5,7 +5,7 @@
       <p>{{ body }}</p>
     </div>
     <div class="link-wrapper">
-      <Nuxt-link to="/edit" class="button--green">edit</Nuxt-link>
+      <Nuxt-link :to="'/posts/edit/'+ id" class="button--green">edit</Nuxt-link>
       <NuxtLink to="/posts" class="button--green">back</NuxtLink>
     </div>
   </section>
@@ -21,6 +21,7 @@
                   return {
                       title: res.data.title,
                       body: res.data.body,
+                      id: res.data.id,
                   }
               })
       }

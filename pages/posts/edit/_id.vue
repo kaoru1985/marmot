@@ -4,18 +4,18 @@
         <div class="post-wrapper">
             <strong>記事を編集します</strong>
             <div style="margin-top: 20px;">
-                表題：<input v-model="posts.title" type="text" name="title">
+                表題：<input v-model="title" type="text" name="title">
             </div>
             <div>
-                本文：<textarea v-model="posts.body" name="body" id="body" rows="5"></textarea>
+                本文：<textarea v-model="body" name="body" id="body" rows="5"></textarea>
             </div>
             <div style="margin: 20px 0 20px">
                 送信内容：
                 <p>
-                    {{ posts.title }}
+                    {{ title }}
                 </p>
                 <p>
-                    {{ posts.body }}
+                    {{ body }}
                 </p>
             </div>
             <button v-on:click="formSubmit()" type="submit" class="button--green">送信</button>
@@ -37,14 +37,17 @@
                     }
                 })
         },
+        data () {
+            return {
+                result: '',
+            }
+        },
         methods: {
             async formSubmit () {
-                axios.post(url,this.posts)
+                axios.put(url + '/' + this.$route.params.id,{ id:this.$route.params.id, title:this.title, body:this.body, userId:1 })
                     .then((res) => {
                         console.log(res);
                         this.result = '記事を更新しました';
-                        // ここでリダイレクト
-                        this.$router.push(`/posts/edit/${res.data.id}`)
                     })
 
                 // 上記と同じ処理
