@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <Header />
     <h1>テストです！</h1>
     {{ posts }}
   </div>

@@ -2,7 +2,7 @@
   <div class="header-wrap">
     <div class="header-content">
       <NuxtLink to='/' class="header-title">maison marmot</NuxtLink>
-      <NuxtLink to='/posts' class="button--green">news</NuxtLink>
+      <NuxtLink :to=$store.state.fuga.buttonUrl class="button--green">{{ $store.state.fuga.buttonName }}</NuxtLink>
     </div>
   </div>
 </template>

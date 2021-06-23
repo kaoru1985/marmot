@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-        <Header />
         <h1>news</h1>
         <a href="/posts/create">記事の作成はこちら</a>
         <div v-for="post in posts" class="component-wrap">

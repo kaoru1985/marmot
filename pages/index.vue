@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <Header />
     <div v-for="product in products" class="component-wrap">
       <Hoge1 :name="product.name" :price="product.price" :detail="product.description" :material="product.material" />
     </div>
