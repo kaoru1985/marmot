@@ -4,6 +4,11 @@
     <Nuxt />
   </div>
 </template>
+<script>
+  export default {
+    middleware: 'button'
+  }
+</script>
 
 <style>
 html {

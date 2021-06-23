@@ -14,7 +14,7 @@
   const axios = require('axios')
   let url = 'https://jsonplaceholder.typicode.com/posts'
   export default {
-      asyncData ({params}) {
+    asyncData ({params}) {
           return axios.get(url + '/' + params.id)
               .then((res) => {
                   console.log(res.data.title);
@@ -24,6 +24,6 @@
                       id: res.data.id,
                   }
               })
-      }
+    },
   }
 </script>
